@@ -106,7 +106,6 @@ section .title{
 }
 .navbar.sticky .menu li a:hover{
     color: #223F43;
-    background: #FF3D00;
 }
 
 /* menu button styling */
