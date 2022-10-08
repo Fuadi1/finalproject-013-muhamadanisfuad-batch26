@@ -1,0 +1,662 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500&family=Rubik:wght@400;500;600;800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* similar ::content */
+section{
+    padding: 100px 0;
+}
+    
+
+.container{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.about, .experience, .education .skills, .interest, .award footer{
+    font-family: 'Rubik', sans-serif;
+}
+.about .about-content,
+.experience .exp-content,
+.skills .skills-content,
+.interest .interest-content,
+.award .award-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Inconsolata', monospace;;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* styling navbar */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Rubik', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: #FF3D00;
+}
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .logo a:hover{
+    color: #FF3D00;
+}
+.navbar .menu li a:hover{
+    color: 	#FF3D00;
+}
+.navbar.sticky .logo a:hover{
+    color: #223F43;
+}
+.navbar.sticky .menu li a:hover{
+    color: #223F43;
+    background: #FF3D00;
+}
+
+/* menu button styling */
+.menu-btn{
+    color: #f2f2f2;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #FF3D00;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+/* home styling */
+.home{
+    display: flex;
+    background: url("images/banner.jpg") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Rubik', sans-serif;
+}
+.home .container{
+    width: 100%;
+    display: flex;
+}
+.home .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home .home-content {
+    width: 100%;
+}
+.home .home-content  .teks-1{
+    font-size: 27px;
+}
+.home .home-content .teks-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content  .teks-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content  .teks-3 span{
+    color: #FF3D00;
+    font-weight: 500;
+}
+.home .home-content  a{
+    display: inline-block;
+    background: #FF3D00;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid #FF3D00;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: #FF3D00;
+    background: none;
+}
+
+/* about styling */
+.about .about-content{
+    width: 100%;
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 250px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .teks{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .teks span{
+    color: #FF3D00;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: #FF3D00;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #FF3D00;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color: #FF3D00;
+    background: none;
+}
+
+/* Experience styling */
+.experience, .skills, .award{
+    color:#fff;
+    background: #1A292C;
+}
+.experience .title::before,
+.skills .title::before,
+.award .title::before{
+    background: #fff;
+}
+.experience .title::after,
+.skills .title::after,
+.award .title::after{
+    background: #1A292C;
+}
+.experience .exp-content .card{
+    width: calc(33% - 20px);
+    background: #223F43;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 2px;
+}
+.experience .exp-content .card:hover{
+    background: #FF3D00;
+}
+.experience .exp-content .card .box{
+    transition: all 0.3s ease;
+}
+.experience .exp-content .card:hover .box{
+    transform: scale(1.05);
+}
+.experience .exp-content .card i{
+    font-size: 50px;
+    color: #FF3D00;
+    transition: color 0.3s ease;
+}
+.experience .exp-content .card:hover i{
+    color: #fff;
+}
+.experience .exp-content .card .teks{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px 10px 7px 0;
+}
+
+/* education styling */
+.education{
+    box-sizing: border-box;
+}
+.education .education-content {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.education .education-content .slides{
+    display: none;
+}
+.education .education-content .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #f2f2f2;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.education .education-content .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.education .education-content .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.education .education-content .slides .teks {
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    color: #f2f2f2;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.education .education-content .slides .numberteks {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.education .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #FF3D00;
+}
+.education .education-content .show {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* skills styling */
+.skills .skills-content .column, 
+.award .award-content .column{
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .teks,
+.award .award-content .left .teks{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p, 
+.award .award-content .left p{
+    text-align: justify;
+}
+.skills .skills-content .left a,
+.award .award-content .left a{
+    display: inline-block;
+    background: #FF3D00;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #FF3D00;
+    transition: all 0.3s ease;
+}
+.skills .skills-content .left a, 
+.award .award-content .left a:hover{
+    color: #FF3D00;
+    background: none;
+}
+.skills .skills-content .right .bar{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.skills .skills-content .right .baris{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.skills .skills-content .right .baris::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #FF3D00;
+}
+.skills-content .right .ad::before{
+    width: 80%;
+}
+.skills-content .right .po::before{
+    width: 90%;
+}
+.skills-content .right .ma::before{
+    width: 80%;
+}
+.skills-content .right .gd::before{
+    width: 90%;
+}
+.skills-content .right .wd::before{
+    width: 60%;
+}
+
+/* Interst styling */
+.interest .interest-content .column{
+    width: calc(80% - 10px);
+    font-family: 'Inconsolata', monospace;;
+}
+.interest .interest-content{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.interest .interest-content .bar{
+    width: 100%;
+    padding: 10px 0 10px 0;
+    margin-bottom: 15px;
+}
+.interest .interest-content .info{
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 20px;
+}
+.interest .interest-content .span{
+    justify-content: space-between;
+}
+.interest .interest-content .baris{
+    height: 7px;
+    width: 100%;
+    background: #223F43;
+    position: relative;
+}
+.interest .interest-content .baris::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #FF3D00;
+}
+.interest-content .front::before{
+    width: 80%;
+}
+.interest-content .back::before{
+    width: 90%;
+}
+.interest-content .uiux::before{
+    width: 80%;
+}
+.interest-content .prgm::before{
+    width: 90%;
+}
+.interest-content .webdev::before{
+    width: 60%;
+}
+
+/* award styling */
+.award .award-content{
+    display: flex;
+    align-content: center;
+}
+.award .award-content .card{
+    margin-bottom: 15px;
+    display: flex;
+    position: relative;
+}
+.award .award-content .card:hover{
+    background: #FF3D00;
+}
+.award .award-content .card .box{
+    width: 100%;
+    background: #223F43;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    padding: 8px 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.award .award-content .card:hover .box{
+    align-items: center;
+    background: #FF3D00;
+    transform: scale(1.05);
+}
+.award .award-content .card i{
+    font-size: 40px;
+    color: #FF3D00;
+    transition: color 0.3s ease;
+}
+.award .award-content .card:hover i{
+    color: #fff;
+}
+.award .award-content .card .teks{
+    align-self: center;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 10px 0px 7px 0;
+}
+
+/* footer styling */
+.footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;;
+}
+footer span a{
+    color: #FF3D00;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+/* Responsive media query */
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 250px;
+        width: 250px;
+    }
+}
+@media (max-width: 991px) {
+    .container{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px) {
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #1A292C;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .teks-2{
+        font-size: 70px;
+    }
+    .home .home-content .teks-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .container{
+        max-width: 930px;
+    }
+    .about .about-content{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        width: 45%;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 55%;
+    }
+    .experience .exp-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column,
+    .award .award-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+@media (max-width: 690px) {
+    .container{
+        padding: 0 23px;
+    }
+    .home .home-content .teks-2{
+        font-size: 60px;
+    }
+    .home .home-content .teks-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .experience .exp-content .card{
+        width: 100%;
+    }
+    .award .award-content .card .box{
+        width: 100%;
+        padding: 5px 100px;
+
+    }
+}

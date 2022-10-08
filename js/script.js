@@ -32,15 +32,43 @@ $(document).ready(function(){
         $('.menu-btn i').toggleClass("active");
     });
 });
-var typed = new Typed(".typing", {
-    strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+let typing = new Typed(".typing", {
+    strings: ["Selamat Datang", "Welcome"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
 });
-var typed = new Typed(".typing-2", {
-    strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+let typed = new Typed(".typing-2", {
+    strings: ["Advertising", "Product Optimizing", "Market Analyzed", "Graphic Designer"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
 });
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
